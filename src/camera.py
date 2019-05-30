@@ -20,13 +20,13 @@ import cv2
 
 # Global variables
 cam_index = 0  # index of camera to capture
-topic = '/dope/webcam_rgb_raw'  # topic for publishing
+topic = '/camera/rgb/image_raw'  # topic for publishing
 cap = cv2.VideoCapture(cam_index)
 if not cap.isOpened():
     print("ERROR:  Unable to open camera for capture.  Is camera plugged in?")
     exit(1)
     
-def publish_images(freq=5):
+def publish_images(freq=30):
     rospy.init_node('dope_webcam_rgb_raw', anonymous=True)
     images_out = rospy.Publisher(topic, Image_msg, queue_size=10)
     rate = rospy.Rate(freq)
