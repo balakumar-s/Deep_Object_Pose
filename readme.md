@@ -75,7 +75,7 @@ This is the official DOPE ROS package for detection and 6-DoF pose estimation of
     
 4. **Start DOPE node**
     ```
-    $ rosrun dope dope.py [my_config.yaml]  # Config file is optional; default is `config_pose.yaml`
+    $ rosrun dope dope_node.py [my_config.yaml]  # Config file is optional; default is `config_pose.yaml`
     ```
 
     *Note:*  Config files must be located in the `~/catkin_ws/src/dope/config/` folder.

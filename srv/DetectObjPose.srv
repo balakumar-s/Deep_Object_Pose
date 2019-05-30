@@ -1,0 +1,10 @@
+string[] obj_names
+sensor_msgs/Image rgb_image
+sensor_msgs/CameraInfo rgb_info
+sensor_msgs/Image depth_image # not required for DOPE
+sensor_msgs/CameraInfo depth_info # not required for DOPE
+---
+string[] obj_idx
+geometry_msgs/PoseStamped[] obj_pose
+sensor_msgs/Image obj_rgb
+bool success
