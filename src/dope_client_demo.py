@@ -31,11 +31,12 @@ def detect_obj_client(obj_names,rgb_img):
 if __name__=='__main__':
     rospy.init_node('demo_dope_client')
     
-    topic_cam='/camera/rgb/image_raw'
+    #topic_cam='/camera/rgb/image_raw'
+    topic_cam='/webcam/image_raw'
 
-    print "available objects: mustard, cracker, gelatin, meat, soup, sugar, all"
+    print "available objects: mustard, cracker, gelatin, meat, soup, sugar,bleach, all"
 
-    all_objects=['mustard', 'cracker', 'gelatin', 'meat', 'soup', 'sugar']
+    all_objects=['mustard', 'cracker', 'gelatin', 'meat', 'soup', 'sugar','bleach']
     if len(sys.argv) > 1:
         obj_name= [sys.argv[1]]
     else:

@@ -20,7 +20,7 @@ import cv2
 
 # Global variables
 cam_index = 0  # index of camera to capture
-topic = '/camera/rgb/image_raw'  # topic for publishing
+topic = '/webcam/image_raw'  # topic for publishing
 cap = cv2.VideoCapture(cam_index)
 if not cap.isOpened():
     print("ERROR:  Unable to open camera for capture.  Is camera plugged in?")
