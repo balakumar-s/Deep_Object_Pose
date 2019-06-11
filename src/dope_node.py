@@ -105,7 +105,7 @@ def DrawCube(points, color=(255, 0, 0)):
     DrawLine(points[1], points[4], color, lineWidthForDrawing)
 
 
-def run_dope_node(params, freq=5):
+def run_dope_node(params, freq=1):
     '''Starts ROS node to listen to image topic, run DOPE, and publish DOPE results'''
 
     global g_img

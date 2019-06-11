@@ -1,0 +1,8 @@
+<launch>
+  <node name="webcam" pkg="usb_cam" type="usb_cam_node" output="screen">
+
+    <param name="video_device" type="string" value="/dev/video0"/>
+    <param name="camera_name" type="string" value="webcam"/>
+    <param name="camera_frame_id" type="string" value="webcam"/>
+  </node>
+</launch>

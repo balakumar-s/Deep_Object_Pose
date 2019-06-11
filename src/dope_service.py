@@ -142,7 +142,7 @@ class dopeClass(object):
                     loc = result["location"]
                     ori = result["quaternion"]                    
                     msg = PoseStamped()
-                    msg.header.frame_id = params["frame_id"]
+                    msg.header.frame_id = rgb_msg.header.frame_id #params["frame_id"]
                     msg.header.stamp = rospy.Time.now()
                     CONVERT_SCALE_CM_TO_METERS = 100
                     msg.pose.position.x = loc[0] / CONVERT_SCALE_CM_TO_METERS
@@ -168,7 +168,7 @@ class dopeClass(object):
                         # Publish the image with results overlaid
                         draw_img=CvBridge().cv2_to_imgmsg(
                             np.array(im)[...,::-1], 
-                            "bgr8")
+                            "rgb8")
             else:
                 print ("object: ",obj_name," not in trained models!!")
         return obj_idx,detected_poses,draw_img
