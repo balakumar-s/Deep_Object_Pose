@@ -1,5 +1,12 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 ![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)
+
+__This Fork implements ros service methods for detecting objects and their poses through ros service-client interface, useful for integration with existing robot task pipelines.__
+
+```rosrun dope dope_service.py``` will initialize the ros service, loading weights for objects listed in ```config/config_pose.yaml```
+
+Look at ```src/dope_client_demo.py``` for an example ros client.
+
 # Deep Object Pose Estimation - ROS Inference  
 
 This is the official DOPE ROS package for detection and 6-DoF pose estimation of **known objects** from an RGB camera.  The network has been trained on the following YCB objects:  cracker box, sugar box, tomato soup can, mustard bottle, potted meat can, and gelatin box.  For more details, see our [CoRL 2018 paper](https://arxiv.org/abs/1809.10790) and [video](https://youtu.be/yVGViBqWtBI).
