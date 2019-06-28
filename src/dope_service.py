@@ -258,6 +258,7 @@ class dopeClass(object):
         self.dope_init=True
         
     def srv_call(self,req):
+        print("Computing object pose")
         if(self.dope_init):
             obj_idx,poses,obj_rgb=self.detect_obj(req.obj_names,req.rgb_info,req.rgb_image)
             if(len(poses)==0):
